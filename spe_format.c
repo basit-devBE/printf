@@ -8,27 +8,27 @@
  */
 int pro(va_list pr, params_t *par)
 {
-    int loopIndex, rotationIndex;
-    int bytesPrinted = 0;
-    char rot13Table[] = "BCDEFGHIJKLMNOPQRSTUVWXYZA	bcdefghijklmnopqrstuvwxyza";
-    char *p = va_arg(pr, char *);
-    (void)par;
+int loopIndex, rotationIndex;
+int bytesPrinted = 0;
+char rot13Table[] = "BCDEFGHIJKLMNOPQRSTUVWXYZA	bcdefghijklmnopqrstuvwxyza";
+char *p = va_arg(pr, char *);
+(void)par;
 
-    loopIndex = 0;
-    rotationIndex = 0;
-    while (p[loopIndex])
-    {
-        if ((p[loopIndex] >= 'A' && p[loopIndex] <= 'Z')
-            || (p[loopIndex] >= 'a' && p[loopIndex] <= 'z'))
-        {
-            rotationIndex = p[loopIndex] - 65;
-            bytesPrinted += _putchar(rot13Table[rotationIndex]);
-        }
-        else
-            bytesPrinted += _putchar(p[loopIndex]);
-        loopIndex++;
-    }
-    return bytesPrinted;
+loopIndex = 0;
+rotationIndex = 0;
+while (p[loopIndex])
+{
+if ((p[loopIndex] >= 'A' && p[loopIndex] <= 'Z')
+|| (p[loopIndex] >= 'a' && p[loopIndex] <= 'z'))
+{
+rotationIndex = p[loopIndex] - 65;
+bytesPrinted += _putchar(rot13Table[rotationIndex]);
+}
+else
+bytesPrinted += _putchar(p[loopIndex]);
+loopIndex++;
+}
+return (bytesPrinted);
 }
 
 /**
@@ -39,19 +39,19 @@ int pro(va_list pr, params_t *par)
  */
 int prr(va_list pr, params_t *par)
 {
-    int stringLength, totalBytes = 0;
-    char *currentChar = va_arg(pr, char *);
-    (void)par;
+int stringLength, totalBytes = 0;
+char *currentChar = va_arg(pr, char *);
+(void)par;
 
-    if (currentChar)
-    {
-        for (stringLength = 0; *currentChar; currentChar++)
-            stringLength++;
-        currentChar--;
-        for (; stringLength > 0; stringLength--, currentChar--)
-            totalBytes += _putchar(*currentChar);
-    }
-    return totalBytes;
+if (currentChar)
+{
+for (stringLength = 0; *currentChar; currentChar++)
+stringLength++;
+currentChar--;
+for (; stringLength > 0; stringLength--, currentChar--)
+totalBytes += _putchar(*currentChar);
+}
+return (totalBytes);
 }
 
 /**
@@ -63,14 +63,14 @@ int prr(va_list pr, params_t *par)
  */
 int pft(char *start, char *stop, char *exit)
 {
-    int totalSum = 0;
+int totalSum = 0;
 
-    while (start <= stop)
-    {
-        if (start != exit)
-            totalSum += _putchar(*start);
-        start++;
-    }
-    return totalSum;
+while (start <= stop)
+{
+if (start != exit)
+totalSum += _putchar(*start);
+start++;
+}
+return (totalSum);
 }
 
