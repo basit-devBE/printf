@@ -9,7 +9,8 @@
  *
  * Return: string
  */
-char *con(long int numberToConvert, int conversionBase, int argumentFlags, params_t *par)
+char *con(long int numberToConvert,
+int conversionBase, int argumentFlags, params_t *par)
 {
 static char *array;
 static char buffer[50];
@@ -24,7 +25,8 @@ h = -numberToConvert;
 sign = '-';
 }
 
-array = argumentFlags & CON_LOWERCASE ? "0123456789abcdef" : "0123456789ABCDEF";
+array = argumentFlags & CON_LOWERCASE ? "0123456789abcdef" :
+"0123456789ABCDEF";
 tr = &buffer[49];
 *tr = '\0';
 
