@@ -107,7 +107,7 @@ return (u);
  * @z:  string
  * @pr: argument pointer
  * @par: parameters struct
- * Return: new pointer
+ * Return: a new pointer
  */
 char *gw(char *z, params_t *par, va_list pr)
 {
