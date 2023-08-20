@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * p_h - prints unsigned lowercase hex num
+ * p_h - prints an unsigned lowercase hex num
  * @pr: argument pointer
  * @par: parameters struct
  * Return: bytes printed
