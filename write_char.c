@@ -23,7 +23,7 @@ int _putchar(int a)
 }
 
 /**
- * _puts - prints string with newline
+ * _puts - will print string with newline
  * @z: string to print
  *
  * Return: void
